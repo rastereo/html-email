@@ -13,6 +13,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="x-apple-disable-message-reformatting" />
     <meta name="format-detection" content="telephone=no,address=no,email=no,date=no,url=no" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="supported-color-schemes" content="light dark" />
     <style type="text/css">
       body {
         padding-top: 0;
@@ -102,6 +104,16 @@
         background-image: url("images/feedback_card.png");
         width: 600px;
         height: 128px;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        .main__dark-mode {
+          background-color: #14e3e4 !important;
+        }
+
+        .contact_dark-mode {
+          background-color: #34303d !important;
+        }
       }
     </style>
   </head>
@@ -194,7 +206,7 @@
                                             <tr>
                                               <!-- LOGO -->
                                               <td align="left">
-                                                <a href="#" target="_blank" rel="noopener noreferrer">
+                                                <a href="" target="_blank" rel="noopener noreferrer">
                                                   <img
                                                     src="images/logo.png"
                                                     width="109"
@@ -297,6 +309,7 @@
                           cellpadding="0"
                           cellspacing="0"
                           style="background-color: #14e3e4"
+                          class="main__dark-mode"
                           width="600"
                         >
                           <tbody>
@@ -666,7 +679,6 @@
                                             <tr>
                                               <td
                                                 align="center"
-                                                style=""
                                                 class="background-image background-image_four"
                                                 background="images/feedback_card.png"
                                                 bgcolor="#14e3e4"
@@ -748,6 +760,7 @@
                                           cellpadding="0"
                                           cellspacing="0"
                                           style="background-color: #34303d"
+                                          class="contact_dark-mode"
                                           width="600"
                                         >
                                           <tbody>
