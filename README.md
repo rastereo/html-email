@@ -1,3 +1,18 @@
+# HTML email
+Веб-версия письма: https://peaceful-faun-3c9350.netlify.app/
+
+## Оптимизация
+При вёрстке использовал [Cahe](https://github.com/example/cahe) для оптимизации и подготовки письма к отправке. Он помог:
+
+- Минимизировал HTML-код;
+- Перенёс CSS-стили в атрибут style элементов;
+- Оптимизировал изображения (сжатие, изменение размера, конвертация SVG);
+- Заменил специальные символы на HTML-сущности (HTML Character Entities) для корректного отображения в почтовых клиентах.
+
+Итоговая версия `build`:
+* Общий размер: 0.75 MB
+* Размер index.html: 28 KB -65%
+
 ## Технологии
 * [Live Server](https://github.com/ritwickdey/vscode-live-server) - Автоматически перезагружает страницу в браузере при сохранении изменений в HTML
 * [HTML ESLINT](https://html-eslint.org/) - Линтер для HTML. Отличный инструмент, особен с моим конфигом
@@ -30,65 +45,22 @@
       "extends": ["plugin:@html-eslint/recommended"]
     }
   ],
-  "ignorePatterns": ["index.html"],
   "rules": {
     "@html-eslint/require-closing-tags": [
       "error",
-      {
-        "selfClosing": "always"
-      }
+      { "selfClosing": "always" }
     ],
-    "@html-eslint/no-extra-spacing-attrs": [
-      "error",
-      {
-        "enforceBeforeSelfClose": true
-      }
-    ],
-    "@html-eslint/no-skip-heading-levels": "error",
-    "@html-eslint/require-meta-viewport": "error",
+    "@html-eslint/no-extra-spacing-attrs": "error",
     "@html-eslint/lowercase": "error",
-    "@html-eslint/no-multiple-empty-lines": "error",
-    "@html-eslint/no-trailing-spaces": "error",
-    "@html-eslint/indent": [
-      "error",
-      2
-    ],
-    "@html-eslint/no-obsolete-tags": "off",
+    "@html-eslint/indent": ["error", 2],
     "@html-eslint/require-attrs": [
       "error",
-      {
-        "tag": "html",
-        "attr": "dir"
-      },
-      {
-        "tag": "a",
-        "attr": "target"
-      },
-      {
-        "tag": "table",
-        "attr": "border",
-        "value": "0"
-      },
-      {
-        "tag": "table",
-        "attr": "cellpadding",
-        "value": "0"
-      },
-      {
-        "tag": "table",
-        "attr": "cellspacing",
-        "value": "0"
-      },
-      {
-        "tag": "table",
-        "attr": "role",
-        "value": "presentation"
-      },
-      {
-        "tag": "img",
-        "attr": "border",
-        "value": "0"
-      }
+      { "tag": "a", "attr": "target" },
+      { "tag": "table", "attr": "border", "value": "0" },
+      { "tag": "table", "attr": "cellpadding", "value": "0" },
+      { "tag": "table", "attr": "cellspacing", "value": "0" },
+      { "tag": "table", "attr": "role", "value": "presentation" },
+      { "tag": "img", "attr": "border", "value": "0" }
     ]
   }
 }
